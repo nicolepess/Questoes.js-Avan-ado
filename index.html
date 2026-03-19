@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador de cliques</title>
 <style>
-
-    
     .h1-1{
         color: blueviolet;
     }
@@ -15,14 +13,24 @@
 <body>
     <div>
         <h1 class="h1-1">Blog</h1>
-    </div>
-    <h1>larissa</h1>
 
-    <button id="botao">Gostei</button>
-    <p id="texto">cliques: </p>
+        <button id="botao">Gostei</button>
+
+        <p id="texto"> </p>
+        
+    </div>
 
     <script>
+        const botao = document.getElementById("botao");
+        const nicole = document.getElementById("texto");
+        let contador = 0;
 
+        botao.addEventListener("click", () => {
+            contador++;
+            nicole.textContent = "cliques: " + contador;
+            console.log(contador)
+
+        })
     </script>
 </body>
 </html>
